@@ -8,9 +8,9 @@ Simple ScratchPad supporting only one notes page.
 
 Downloads are currently available for MacOS and Windows.
 
-[Mac OS App](#)
+[Mac OS App](https://github.com/namuan/one-page-releases/releases/download/0.1.0/onepage-macos-0.1.0.zip)
 
-[Windows App](#)
+[Windows App](https://github.com/namuan/one-page-releases/releases/download/0.1.0/onepage-win-0.1.0.zip)
 
 [Linux from Source](docs/installation.md)
 
