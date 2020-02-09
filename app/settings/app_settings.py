@@ -6,7 +6,6 @@ from typing import Any, Union
 from PyQt5.QtCore import QSettings, QStandardPaths
 from PyQt5.QtWidgets import qApp
 
-from app.core.str_utils import str_to_bool
 from app.data.data_store import DataStore
 from app.settings.app_config import AppConfig
 
@@ -32,7 +31,8 @@ class AppSettings:
             self.app_dir.joinpath(settings_file).as_posix(), QSettings.IniFormat
         )
         self.settings.sync()
-        self.data = DataStore(self.app_dir)
+        app_config = self.load_configuration()
+        self.data = DataStore(app_config.notes_file)
 
     def init_logger(self):
         log_file = f"{self.app_name}.log"
@@ -56,16 +56,16 @@ class AppSettings:
         self.settings.setValue("windowState", window_state)
         self.settings.sync()
 
-    def save_configuration(self, app_config):
-        self.settings.setValue(AppConfig.STARTUP_CHECK_KEY, app_config.startup_check)
+    def save_configuration(self, app_config: AppConfig):
+        self.settings.setValue(AppConfig.NOTES_FILE_KEY, app_config.notes_file)
         self.settings.sync()
+        self.data.update_store(app_config.notes_file)
 
     def load_configuration(self):
         app_config = AppConfig()
-        settings_value = self.settings.value(
-            AppConfig.STARTUP_CHECK_KEY, app_config.startup_check
+        app_config.notes_file = self.settings.value(
+            AppConfig.NOTES_FILE_KEY, app_config.notes_file or f"{self.app_dir}/onepage.txt"
         )
-        app_config.startup_check = str_to_bool(settings_value)
         return app_config
 
     def geometry(self):

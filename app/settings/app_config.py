@@ -5,13 +5,13 @@ import attr
 
 @attr.s(auto_attribs=True)
 class AppConfig:
-    STARTUP_CHECK_KEY: ClassVar[str] = "startupCheck"
-    _startup_check: bool = True
+    NOTES_FILE_KEY: ClassVar[str] = "notesFile"
+    _notes_file: str = ""
 
     @property
-    def startup_check(self):
-        return self._startup_check
+    def notes_file(self):
+        return self._notes_file
 
-    @startup_check.setter
-    def startup_check(self, val):
-        self._startup_check = val
+    @notes_file.setter
+    def notes_file(self, val):
+        self._notes_file = val

@@ -41,24 +41,31 @@
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="update">
+   <widget class="QWidget" name="notes">
     <attribute name="title">
-     <string>Updates</string>
+     <string>Notes</string>
     </attribute>
-    <widget class="QCheckBox" name="chk_updates_startup">
+    <widget class="QLineEdit" name="txt_notes_file">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>20</y>
-       <width>411</width>
-       <height>20</height>
+       <width>381</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btn_select_notes_file">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>20</y>
+       <width>26</width>
+       <height>22</height>
       </rect>
      </property>
      <property name="text">
-      <string>Check for updates on start up</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
+      <string>...</string>
      </property>
     </widget>
    </widget>
