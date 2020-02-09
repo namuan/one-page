@@ -1,6 +1,7 @@
 ## OnePage
 
-Simple ScratchPad supporting only one page.
+![Logo](resources/images/app-logo.png)
+:: Simple ScratchPad supporting only one page
 
 ### Some features:
 
