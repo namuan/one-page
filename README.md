@@ -1,6 +1,19 @@
 ## OnePage
 
-Simple ScratchPad supporting only one notes page.
+Simple ScratchPad supporting only one page.
+
+### Some features:
+
+🚀 Only allows you to create a single note
+
+🚀 No possibility of creating multiple notes so your notes are always in front
+
+🚀 Single App across platforms
+
+🚀 Remove any formatting style
+
+🚀 Auto-save notes
+
 
 ![OnePage](docs/images/one-page-screen.png)
 
@@ -13,5 +26,3 @@ Downloads are currently available for MacOS and Windows.
 [Windows App](https://github.com/namuan/one-page-releases/releases/download/0.1.0/onepage-win-0.1.0.zip)
 
 [Linux from Source](docs/installation.md)
-
-

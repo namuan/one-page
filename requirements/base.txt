@@ -2,5 +2,4 @@ PyQt5==5.12.3
 darkdetect
 attrs
 cattrs
-Pygments
 dataset
