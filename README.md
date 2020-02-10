@@ -1,7 +1,7 @@
-## OnePage
-
-![Logo](resources/images/app-logo.png)
-:: Simple ScratchPad supporting only one page
+<p align="center">
+  <img src="https://github.com/namuan/one-page/raw/master/resources/images/app-logo.png" width="128px"/>
+</p>
+<h1 align="center">OnePage :: Simple Cross-Platform ScratchPad</h1>  
 
 ### Some features:
 
