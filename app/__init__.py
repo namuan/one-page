@@ -1,4 +1,4 @@
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __appname__ = "OnePage"
 __description__ = "Simple ScratchPad"
 __desktopid__ = "dev.deskriders.OnePage"

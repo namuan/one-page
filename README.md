@@ -29,3 +29,9 @@ Downloads are currently available for MacOS and Windows.
 [Windows App](https://github.com/namuan/one-page-releases/releases/download/0.3.0/onepage-win-0.3.0.zip)
 
 [Linux from Source](docs/installation.md)
+
+#### Development
+
+Code Signing
+
+./mac-codesign.sh "Identity"

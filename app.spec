@@ -37,9 +37,11 @@ coll = COLLECT(exe,
 app = BUNDLE(coll,
              name='{}.app'.format(app.__appname__),
              icon='resources/icons/app.icns',
-             bundle_identifier=None,
+             bundle_identifier='dev.deskriders.onepage',
              info_plist={
+                'CFBundleName': 'OnePage',
                 'CFBundleShortVersionString': app.__version__,
+                'NSPrincipalClass': 'NSApplication',
                 'NSHighResolutionCapable': 'True'
                 }
              )
