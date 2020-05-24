@@ -47,9 +47,6 @@ deps: ## Reinstalls dependencies
 package: clean ## Rebuilds venv and packages app
 	export PYTHONPATH=`pwd`:$PYTHONPATH && ./venv/bin/python3 setup.py bdist_app
 
-macsign: package ## Codesign package for MacOS
-	./mac-codesign.sh
-
 uic: res ## Converts ui files to python
 	for i in `ls resources/views/*.ui`; do FNAME=`basename $${i} ".ui"`; ./venv/bin/pyuic5 $${i} > "app/generated/$${FNAME}_ui.py"; done
 
