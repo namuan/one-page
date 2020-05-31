@@ -2,13 +2,6 @@ export PROJECTNAME=$(shell basename "$(PWD)")
 
 .SILENT: ;               # no need for @
 
-setup: ## Setup virtual environment and install dependencies
-	echo "Run the following commands to install required dependencies"
-	echo "python3 -m venv venv"
-	echo "source venv/bin/activate"
-	echo "pip install -r requirements/dev.txt"
-	echo "Once everything is installed, 'make run' to run the application"
-
 release: ## Step to prepare a new release
 	echo "Instructions to prepare release"
 	echo "Repo: one-page: Increment version in app/__init__.py"
@@ -36,10 +29,11 @@ black: ## Runs black for code formatting
 lint: black ## Runs Flake8 for linting
 	flake8 app
 
-reset: ## Re-initiates virtualenv
+setup: clean ## Re-initiates virtualenv
 	rm -rf venv
 	python3 -m venv venv
 	./venv/bin/python3 -m pip install -r requirements/dev.txt
+	echo "Now you can 'make run' to run the application"
 
 deps: ## Reinstalls dependencies
 	./venv/bin/python3 -m pip install -r requirements/dev.txt
