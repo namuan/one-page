@@ -40,6 +40,7 @@ app = BUNDLE(coll,
              bundle_identifier='dev.deskriders.onepage',
              info_plist={
                 'CFBundleName': 'OnePage',
+                'CFBundleVersion': app.__version__,
                 'CFBundleShortVersionString': app.__version__,
                 'NSPrincipalClass': 'NSApplication',
                 'NSHighResolutionCapable': 'True'

@@ -17,21 +17,22 @@
 
 🚀 Auto-save notes
 
-
 ![OnePage](docs/images/one-page-screen.png)
-
-#### Downloads
-
-Downloads are currently available for MacOS and Windows.
-
-[Mac OS App](https://github.com/namuan/one-page-releases/releases/download/0.3.0/onepage-macos-0.3.0.zip)
-
-[Windows App](https://github.com/namuan/one-page-releases/releases/download/0.3.0/onepage-win-0.3.0.zip)
-
-[Linux from Source](docs/installation.md)
 
 #### Development
 
-Code Signing
+You'll need Python3.6+ to setup this application.
 
-./mac-codesign.sh "Identity"
+Run the following command to set-up virtual environment
+
+```  
+$ make setup 
+```  
+  
+Then `make run` should startup the application.  
+  
+```  
+$ make run  
+```
+
+You can just run `make` to display list of available commands.

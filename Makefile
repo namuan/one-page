@@ -29,10 +29,11 @@ black: ## Runs black for code formatting
 lint: black ## Runs Flake8 for linting
 	flake8 app
 
-setup: ## Re-initiates virtualenv
+setup: clean ## Re-initiates virtualenv
 	rm -rf venv
 	python3 -m venv venv
 	./venv/bin/python3 -m pip install -r requirements/dev.txt
+	echo "Now you can 'make run' to run the application"
 
 deps: ## Reinstalls dependencies
 	./venv/bin/python3 -m pip install -r requirements/dev.txt
