@@ -3,3 +3,4 @@ Sphinx
 sphinx_rtd_theme
 flake8
 black
+PyQt5-stubs==5.15.2.0
