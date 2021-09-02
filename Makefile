@@ -51,6 +51,9 @@ res: ## Generates and compresses resource file
 run: ## Runs the application
 	export PYTHONPATH=`pwd`:$PYTHONPATH && ./venv/bin/python3 app/__main__.py
 
+install-macosx: package ## Installs application in users Application folder
+	./scripts/install-macosx.sh OnePage.app
+
 icns: ## Generates icon files from svg
 	echo "Run ./mk-icns.sh resources/icons/app.svg app"
 
