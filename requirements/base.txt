@@ -1,5 +1,4 @@
 PyQt6==6.4.2
-darkdetect
 attrs
 cattrs
 dataset
