@@ -45,9 +45,6 @@ package: clean ## Rebuilds venv and packages app
 uic: ## Converts ui files to python
 	for i in `ls resources/views/*.ui`; do FNAME=`basename $${i} ".ui"`; ./venv/bin/pyuic6 $${i} > "app/generated/$${FNAME}_ui.py"; done
 
-res: ## Generates and compresses resource file
-	./venv/bin/pyrcc5 -compress 9 -o app/generated/resources_rc.py resources/resources.qrc
-
 run: ## Runs the application
 	export PYTHONPATH=`pwd`:$PYTHONPATH && ./venv/bin/python3 app/__main__.py
 
