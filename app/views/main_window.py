@@ -2,8 +2,8 @@ import logging
 import traceback
 
 import sys
-from PyQt5.QtGui import QCloseEvent
-from PyQt5.QtWidgets import QMainWindow, qApp
+from PyQt6.QtGui import QCloseEvent
+from PyQt6.QtWidgets import QMainWindow, QApplication
 
 from app.controllers import (
     MainWindowController,
@@ -48,6 +48,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         event.accept()
         self.main_controller.shutdown()
         try:
-            qApp.exit(0)
+            QApplication.instance().exit(0)
         except:
             pass

@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication
 
 from app import __version__, __appname__, __desktopid__
 from app.themes.theme_provider import configure_theme
@@ -15,7 +15,7 @@ def main():
     window = MainWindow()
     configure_theme(app)
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 
 if __name__ == "__main__":
