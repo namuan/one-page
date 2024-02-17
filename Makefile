@@ -38,7 +38,7 @@ setup: clean ## Re-initiates virtualenv
 deps: ## Reinstalls dependencies
 	./venv/bin/python3 -m pip install -r requirements/dev.txt
 
-package: clean ## Rebuilds venv and packages app
+package: clean ## Packages app
 	./venv/bin/python3 -m pip install -r requirements/build.txt
 	export PYTHONPATH=`pwd`:$PYTHONPATH && ./venv/bin/python3 setup.py bdist_app
 
