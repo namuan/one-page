@@ -1,6 +1,7 @@
 from PyQt6.QtGui import QKeySequence
 from PyQt6.QtGui import QShortcut
 
+
 class ShortcutController:
     def __init__(self, parent_window, app):
         self.parent = parent_window

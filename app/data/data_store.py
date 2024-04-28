@@ -6,7 +6,6 @@ UTF8_ENCODING = "utf-8"
 
 
 class DataStore:
-
     def __init__(self, notes_path):
         self.db = Path(notes_path)
         self.create_if_not_exists()

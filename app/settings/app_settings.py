@@ -16,14 +16,18 @@ class AppSettings:
         self.app_name: str = None
         self.app_dir: Union[Path, Any] = None
         self.docs_location: Path = Path(
-            QStandardPaths.writableLocation(QStandardPaths.StandardLocation.DocumentsLocation)
+            QStandardPaths.writableLocation(
+                QStandardPaths.StandardLocation.DocumentsLocation
+            )
         )
         self.data: DataStore = None
 
     def init(self):
         self.app_name = QApplication.applicationName().lower()
         self.app_dir = Path(
-            QStandardPaths.writableLocation(QStandardPaths.StandardLocation.AppConfigLocation)
+            QStandardPaths.writableLocation(
+                QStandardPaths.StandardLocation.AppConfigLocation
+            )
         )
         self.app_dir.mkdir(exist_ok=True)
         settings_file = f"{self.app_name}.ini"
@@ -64,7 +68,8 @@ class AppSettings:
     def load_configuration(self):
         app_config = AppConfig()
         app_config.notes_file = self.settings.value(
-            AppConfig.NOTES_FILE_KEY, app_config.notes_file or f"{self.app_dir}/onepage.txt"
+            AppConfig.NOTES_FILE_KEY,
+            app_config.notes_file or f"{self.app_dir}/onepage.txt",
         )
         return app_config
 

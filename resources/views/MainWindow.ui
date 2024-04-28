@@ -16,10 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPlainTextEdit" name="txt_scratch_pad">
-      <property name="plainText">
-       <string/>
-      </property>
+     <widget class="QTextEdit" name="txt_scratch_pad">
       <property name="placeholderText">
        <string>Scratch Pad ...</string>
       </property>

@@ -8,6 +8,6 @@ from pathlib import Path
 from PyQt6.QtCore import QDir
 
 resources_path = Path(__file__).parent.parent / "resources"
-QDir.addSearchPath('images', resources_path.joinpath("images").as_posix())
-QDir.addSearchPath('fonts', resources_path.joinpath("fonts").as_posix())
-QDir.addSearchPath('icons', resources_path.joinpath("icons").as_posix())
+QDir.addSearchPath("images", resources_path.joinpath("images").as_posix())
+QDir.addSearchPath("fonts", resources_path.joinpath("fonts").as_posix())
+QDir.addSearchPath("icons", resources_path.joinpath("icons").as_posix())
