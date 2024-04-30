@@ -17,6 +17,9 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTextEdit" name="txt_scratch_pad">
+      <property name="acceptRichText">
+       <bool>false</bool>
+      </property>
       <property name="placeholderText">
        <string>Scratch Pad ...</string>
       </property>

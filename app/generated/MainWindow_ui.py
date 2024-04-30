@@ -18,6 +18,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.txt_scratch_pad = QtWidgets.QTextEdit(parent=self.centralwidget)
+        self.txt_scratch_pad.setAcceptRichText(False)
         self.txt_scratch_pad.setObjectName("txt_scratch_pad")
         self.horizontalLayout.addWidget(self.txt_scratch_pad)
         MainWindow.setCentralWidget(self.centralwidget)
